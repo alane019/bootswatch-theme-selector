@@ -1,38 +1,135 @@
-.App {
+/* .App {
   text-align: center;
+} */
+
+.btn{
+	margin: 2px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+#theme-selector-dropdown{
+	display: block;
+	/* background-color: rgba(50, 205, 120, 0.178);
+	background: linear-gradient(#4ea53350, #75b5d375); */
+	padding: 4px;
+	color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#theme-selector-dropdown div {
+	/* display: block; */
+	/* background-color: rgba(50, 205, 120, 0.178);
+	background: linear-gradient(#4ea53350, #75b5d375); */
+	padding: 6px;
+	animation: pulse 1.33s infinite;
+	color: rgb(251, 255, 255);
+	text-shadow: 0 1px 3px black;
+	font-size: 1.25rem;
+	background-color: rgba(13, 31, 90, 0.747);
+	padding-left: 15px;
+	letter-spacing: 1.25px;
+}
+
+.nav-link .dropdown-toggle .show{
+   padding-left: 50px;
+}
+
+#theme-selector-dropdown ul{
+	display: block;
+	/* background-color: rgba(192, 50, 205, 0.596);
+	background: linear-gradient(#abd3d350, #e7998575, #9198e585, #abd3d3, #e799857c,  #9198e55e );  */
+	padding: 4px;
+}
+
+
+#banner{
+	padding-top: 60px !important;
+
+}
+
+#default{
+	display: block;
+	font-size: 1.5em;
+	margin-top: 1em;
+	margin-bottom: .5em;
+	font-weight: 600;
+}
+
+.not-bold{
+	font-weight: normal;
+	font-size: .85em;
+}
+
+.select-theme, .card, h1, h2,
+h3, h4, h5, h6 {
+	margin-top: 1.2rem !important;
+
+}
+
+.card .text-white .bg-info .mb-3{
+	width: 500px !important;
+}
+
+#cdn-description{
+	display: block;
+	font-size: 1.17em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+}
+
+/* pulse animation */
+@keyframes pulse {
+	0% {
+		transform: scale(0.999);
+		box-shadow: 0 0 0 0 rgba(104, 136, 132, 0.192);
+	}
+
+	70% {
+		transform: scale(0.997);
+		box-shadow: 0 0 0 10px rgba(51, 217, 178, 0.006);
+	}
+
+	100% {
+		transform: scale(0.999);
+		box-shadow: 0 0 0 0 rgba(51, 217, 178, 0);
+	}
+}
+
+
+
+/* Fade-in animation --------------------- */
+.fade-in {
+	animation: fadeIn linear 1s;
+	-webkit-animation: fadeIn linear 1s;
+	-moz-animation: fadeIn linear 1s;
+	-o-animation: fadeIn linear 1s;
+	-ms-animation: fadeIn linear 1s;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  @keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
   }
-  to {
-    transform: rotate(360deg);
+  
+  @-moz-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
   }
-}
+  
+  @-webkit-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+  }
