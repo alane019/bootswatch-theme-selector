@@ -17,7 +17,8 @@
 
 ---
 
-![screen](./src/images/screen.png)
+![screen](./public/assets/images/Capture.PNG)
+
 
 ##  Getting Started <a name = "environment_setup"></a>
 
