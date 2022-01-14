@@ -14,11 +14,11 @@ import { DropdownButton, Dropdown } from "react-bootstrap";
 const apiEndpoint = "https://bootswatch.com/api/5.json";																		
 																		
 function App() {																		
-	const [cdnData, setCdnData] = useState("");																	
 	const [theme, setTheme] = useState("");																																																
-	const [themeNameList, setThemeNameList] = useState([]);																	
 	const [themeList, setThemeList] = useState([]);																	
 	const [themeHref, setThemeHref] = useState("");		
+	//const [themeNameList, setThemeNameList] = useState([]);																	
+	// const [cdnData, setCdnData] = useState("");																	
 	
 											
 																			
@@ -32,78 +32,46 @@ function App() {
 		setThemeHref(hrefText);													
 	};			
 																		
-	const getCdnData = async () => {																	
-		axios																
-			.get(apiEndpoint)															
-			.then((response) => {															
-				console.log(response.data);														
-				console.log("response.data.themes: ", response.data.themes);														
-				setCdnData(response.data.themes);																												
-				if (theme){														
-					setThemeHref(													
-					"https://cdn.jsdelivr.net/npm/bootswatch@5.1.1/dist/" +												
-							theme +											
-							"/bootstrap.min.css"
-					);													
-				}														
-																		
-				let themeNames = [];														
-				let themes = [];														
-				for (let i = 0; i < response.data.themes.length; i++) {														
-					let themeData = {													
-						name: response.data.themes[i].name.toLowerCase(),												
-						css: response.data.themes[i].css,												
-						cssCdn: response.data.themes[i].cssCdn,												
-						cssMin: response.data.themes[i].cssMin,												
-						description: response.data.themes[i].description,												
-						preview: response.data.themes[i].preview,												
-						scss: response.data.themes[i].scss,												
-						scssVariables: response.data.themes[i].scssVariables,												
-						thumbnail: response.data.themes[i].thumbnail,												
-					};													
-																		
-					themeNames.push(response.data.themes[i].name);													
-					themes.push(themeData);													
-				}														
-				setThemeNameList(themeNames);														
-				setThemeList(themes);														
-																		
-				console.log("themeNames: ", themeNames);														
-				console.log("THEME-LIST: ", themeNameList);														
-				/* --------------------------- */														
-				console.log("--------------------");														
-				console.log("Themes: ", themes);														
-				console.log("THEME-LIST: ", themeList);														
-				console.log("--------------------");														
-				console.log("themeList[0]", themeList[0]);														
-				console.log("-----({themeList})---");														
-				console.log({ themeList });														
-																		
-			})															
-			.catch((error) => {															
-				console.error(error);														
-			});															
-	};																	
+															
 				
 																		
-	useEffect(() => {	
-
-		getCdnData()																
-		
-		.then(() => {																																									
-		console.log("~~~~~ Values in  useEffect   ~~~~~~~~~~");																
-		console.log("theme: ", theme);																
-		console.log("themeNameList: ", themeNameList);																
-		console.log("main themeList: ", themeList );																
-		console.log(themeList);																
-		console.log("cdnData: ", cdnData);																
-		console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");																																
-			})															
-			.catch((error) => {															
-				console.error(error);														
-			});															
-	// setSelectTitle(" Select a Theme ");																
-	}, []);		
+	useEffect(() => { 
+		//getCdnData()
+		// const getCdnData = async () => {																	
+			axios																
+				.get(apiEndpoint)															
+				.then((response) => {															
+					console.log(response.data);														
+					console.log("response.data.themes: ", response.data.themes);														
+					// setCdnData(response.data.themes);																												
+					if (theme){														
+						setThemeHref(													
+						"https://cdn.jsdelivr.net/npm/bootswatch@5.1.1/dist/" +												
+								theme +											
+								"/bootstrap.min.css"
+						);													
+					}																																										
+					let themes = [];
+					for (let i = 0; i < response.data.themes.length; i++) {														
+						let themeData = {													
+							name: response.data.themes[i].name.toLowerCase(),												
+							css: response.data.themes[i].css,												
+							cssCdn: response.data.themes[i].cssCdn,												
+							cssMin: response.data.themes[i].cssMin,												
+							description: response.data.themes[i].description,												
+							preview: response.data.themes[i].preview,												
+							scss: response.data.themes[i].scss,												
+							scssVariables: response.data.themes[i].scssVariables,												
+							thumbnail: response.data.themes[i].thumbnail,												
+						};																																						
+						themes.push(themeData);													
+					}																											
+					setThemeList(themes);																																				
+				})															
+				.catch((error) => {															
+					console.error(error);														
+				});																																
+	}, []) // eslint-disable-line react-hooks/exhaustive-deps		
 		
 	let getThemeDescription = () => {																																								
 		let themeDescr;
@@ -111,7 +79,6 @@ function App() {
 			let index = themeList.findIndex((item) => item.name === theme);														
 			themeDescr = themeList[index].description;	
 		}
-		console.log("THEME DESCRIPTION", themeDescr);
 		return themeDescr;													
 	};		
 													
@@ -119,10 +86,8 @@ function App() {
 	var i = 0;																																		
 	let themeArray = themeList;																	
 			
-		////////////////////////////////////////////////////////
 
-		return(																
-																		
+	return(																																	
 		<Container>																
 			{/* <link href={"https://cdn.jsdelivr.net/npm/bootswatch@5.1.1/dist/" + theme + "/bootstrap.min.css"} rel="stylesheet" crossOrigin="anonymous" /> */}															
 			{theme ? (															

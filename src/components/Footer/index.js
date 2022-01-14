@@ -1,55 +1,16 @@
 import React from 'react';
- //import cx from 'clsx';
-// import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Divider from '@material-ui/core/Divider';
 import Typography from '@material-ui/core/Typography';
-// import FormLabel from '@material-ui/core/FormLabel';
 import Widgets from '@material-ui/icons/Widgets';
 import { ColumnToRow, Row, Item } from '@mui-treasury/components/flex';
 import { NavMenu, NavItem } from '@mui-treasury/components/menu/navigation';
-import {
-  EmailSubscribe,
-  EmailTextInput,
-  SubmitButton,
-} from '@mui-treasury/components/EmailSubscribe';
+
 import {
   SocialProvider,
   SocialLink,
 } from '@mui-treasury/components/socialLink';
-
-// import { useMoonSocialLinkStyles } from '@mui-treasury/styles/socialLink/moon';
-// import { useBootstrapEmailSubscribeStyles } from '@mui-treasury/styles/emailSubscribe/bootstrap';
-// import { usePlainNavigationMenuStyles } from '@mui-treasury/styles/navigationMenu/plain';
-
-// const useStyles = makeStyles(({ typography, palette, breakpoints }) => ({
-//   legalLink: {
-//     ...typography.caption,
-//     justifyContent: 'center',
-//     color:
-//       palette.type === 'dark'
-//         ? 'rgba(255,255,255,0.57)'
-//         : palette.text.secondary,
-//     position: 'relative',
-//     [breakpoints.up('sm')]: {
-//       '&:not(:first-of-type)': {
-//         '&:before': {
-//           content: '"|"',
-//           display: 'block',
-//           position: 'absolute',
-//           left: 0,
-//         },
-//       },
-//     },
-//   },
-//   newsletter: {
-//     fontSize: typography.caption.fontSize,
-//   },
-//   navMenu: {
-//     flexWrap: 'wrap',
-//   }
-// }));
 
  const Footer = React.memo(function NeptuneAppFooter() {
   return (
@@ -90,20 +51,6 @@ import {
                   <SocialLink brand={'Instagram'} href={'https://github.com/alane019'} />
                 </SocialProvider>
               </Box>
-              {/* <FormLabel htmlFor={'newsletter'}>
-                Get the freshest news from us
-              </FormLabel>
-              <EmailSubscribe
-                onSubmit={email => alert(`Your email is ${email}.`)}
-               
-                inputClearedAfterSubmit
-              >
-                <EmailTextInput
-                  id={'newsletter'}
-                  placeholder="Enter your email"
-                />
-                <SubmitButton>Subscribe</SubmitButton>
-              </EmailSubscribe> */}
             </Item>
           </Row>
         </Box>

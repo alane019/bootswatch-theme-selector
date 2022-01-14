@@ -32,7 +32,7 @@ const Header = () => {
 								<a
 									className="nav-link dropdown-toggle"
 									data-bs-toggle="dropdown"
-									href="#"
+									href="/#"
 									id="download"
 								>
 									 Default <span className="caret" />
