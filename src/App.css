@@ -1,32 +1,27 @@
-/* .App {
-  text-align: center;
-} */
 
 .btn{
 	margin: 2px;
 }
 
+.btn .dropdown-toggle{
+	margin-left: 0px !important;
+}
+
+.btn-group .btn{
+	margin-right: 0px !important;
+}
 
 #theme-selector-dropdown{
 	display: block;
-	/* background-color: rgba(50, 205, 120, 0.178);
-	background: linear-gradient(#4ea53350, #75b5d375); */
 	padding: 4px;
 	color: black;
 }
 
-#theme-selector-dropdown div {
-	/* display: block; */
-	/* background-color: rgba(50, 205, 120, 0.178);
-	background: linear-gradient(#4ea53350, #75b5d375); */
+#theme-select-dropdown{
+	z-index: 50;
 	padding: 6px;
 	animation: pulse 1.33s infinite;
-	color: rgb(251, 255, 255);
 	text-shadow: 0 1px 3px black;
-	font-size: 1.25rem;
-	background-color: rgba(13, 31, 90, 0.747);
-	padding-left: 15px;
-	letter-spacing: 1.25px;
 }
 
 .nav-link .dropdown-toggle .show{
@@ -35,15 +30,11 @@
 
 #theme-selector-dropdown ul{
 	display: block;
-	/* background-color: rgba(192, 50, 205, 0.596);
-	background: linear-gradient(#abd3d350, #e7998575, #9198e585, #abd3d3, #e799857c,  #9198e55e );  */
 	padding: 4px;
 }
 
-
 #banner{
 	padding-top: 60px !important;
-
 }
 
 #default{
@@ -79,16 +70,20 @@ h3, h4, h5, h6 {
 	font-weight: bold;
 }
 
-/* pulse animation */
+#page-description{
+	max-width: 57rem;
+}
+
+/* pulse animation -------------------------- */
 @keyframes pulse {
 	0% {
 		transform: scale(0.999);
-		box-shadow: 0 0 0 0 rgba(104, 136, 132, 0.192);
+		box-shadow: 0 0 0 0 rgba(104, 136, 132, 0.2);
 	}
 
 	70% {
 		transform: scale(0.997);
-		box-shadow: 0 0 0 10px rgba(51, 217, 178, 0.006);
+		box-shadow: 0 0 0 10px rgba(51, 217, 178, 0.009);
 	}
 
 	100% {
@@ -97,18 +92,15 @@ h3, h4, h5, h6 {
 	}
 }
 
-
-
 /* Fade-in animation --------------------- */
 .fade-in {
-	animation: fadeIn linear 1s;
-	-webkit-animation: fadeIn linear 1s;
-	-moz-animation: fadeIn linear 1s;
-	-o-animation: fadeIn linear 1s;
-	-ms-animation: fadeIn linear 1s;
+	animation: fadeIn linear 450ms;
+	-webkit-animation: fadeIn linear 450ms;
+	-moz-animation: fadeIn linear 450ms;
+	-o-animation: fadeIn linear 450ms;
+	-ms-animation: fadeIn linear 450ms;
   }
 
-  
   @keyframes fadeIn {
 	0% {opacity:0;}
 	100% {opacity:1;}
@@ -133,3 +125,17 @@ h3, h4, h5, h6 {
 	0% {opacity:0;}
 	100% {opacity:1;}
   }
+
+  /* Media query for mobile viewport ------------------------------------------- */
+  @media (max-width: 600px) {
+	.navbar .container {
+		justify-content: space-between;	}
+
+		#page-description{
+			max-width: 100% !important;
+		}
+}
+  /* ---------------------------------------------------------------------------- */
+
+
+  

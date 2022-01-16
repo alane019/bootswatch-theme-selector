@@ -1,4 +1,5 @@
 import React from "react";
+import { GitHub } from 'react-feather';
 
 const Header = () => {
 	return (
@@ -42,24 +43,23 @@ const Header = () => {
 										className="dropdown-item"
 										rel="noopener noreferrer"
 										target="_blank"
-										href="https://jsfiddle.net/bootswatch/mLascy62/"
+										href="https://jsfiddle.net/user/bootswatch/fiddles/2/"
 									>
 										Open in JSFiddle
 									</a>
-									<div className="dropdown-divider" />
+									<div className="dropdown-divider" /> 
 									<a
 										className="dropdown-item"
-										href="./assets/bootstrap-4.6.1/dist/css/bootstrap.min.css"
-										download
+										href="https://github.com/twbs/bootstrap/releases/download/v4.6.1/bootstrap-4.6.1-dist.zip"
+										//download
 										>
-										bootstrap.min.css
+										Download default Bootstrap 4.6.1 (Compliled CSS and JS)
 									</a>
-									<a
-										className="dropdown-item"
-										href="./assets/bootstrap-4.6.1/dist/css/bootstrap.css"
-										download
+									<a className="dropdown-item"
+										//download
+										href="https://getbootstrap.com/docs/4.6/getting-started/download/"
 									>
-										bootstrap.css
+										Default Bootstrap source documentation 
 									</a>
 								</div>
 							</li>
@@ -70,19 +70,12 @@ const Header = () => {
 									target="_blank"
 									rel="noopener noreferrer"
 									className="nav-link"
-									href="https://github.com/thomaspark/bootswatch/"
+									href="https://github.com/alane019/bootswatch-theme-selector"
 								>
-									<i className="fa fa-github" />  GitHub
-								</a>
-							</li>
-							<li className="nav-item">
-								<a
-									target="_blank"
-									rel="noopener noreferrer"
-									className="nav-link"
-									href="https://twitter.com/bootswatch"
-								>
-									<i className="fa fa-twitter" />  Twitter
+									<GitHub 
+									title="Github repository"
+									alt="github icon" />
+
 								</a>
 							</li>
 						</ul>

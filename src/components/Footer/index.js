@@ -84,7 +84,7 @@ import {
                   variant={'caption'}
                   color={'textSecondary'}
                 >
-                  Bootswatch Theme Selector | 2022 All rights reserved
+                  Bootswatch Theme Selector |  &copy; 2022 All rights reserved
                 </Typography>
               </Box>
             </Item>
